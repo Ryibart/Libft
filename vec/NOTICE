@@ -1,0 +1,8 @@
+NOTICE
+
+This project includes code derived from another project licensed under the Apache License 2.0.
+The derived code are vec/vector*.c and include/t_vector.h.
+The original code can be found at [https://github.com/juliuskoskela/c-vec].
+Modifications have been made to the original code, including but not limited to variable & function renaming, refractoring and adaptation for integration into this project.
+
+This derivative work complies with the Apache 2.0 License requirements.
