@@ -6,7 +6,7 @@
 #    By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/17 14:30:33 by rtammi            #+#    #+#              #
-#    Updated: 2024/09/27 01:59:31 by rtammi           ###   ########.fr        #
+#    Updated: 2024/09/27 06:02:32 by rtammi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -116,6 +116,25 @@ MISC		:= 	ft_atoi.c						\
 				ft_toupper.c					\
 				ft_tolower.c
 
+VEC			:=	vector_append.c					\
+				vector_clear.c					\
+				vector_copy.c					\
+				vector_filter.c					\
+				vector_find.c					\
+				vector_free.c					\
+				vector_from.c					\
+				vector_get.c					\
+				vector_insert.c					\
+				vector_iter.c					\
+				vector_map.c					\
+				vector_new.c					\
+				vector_pop.c					\
+				vector_prepend.c				\
+				vector_push.c					\
+				vector_reduce.c					\
+				vector_remove.c					\
+				vector_resize.c					\
+				vector_sort.c
 
 SRCS        := $(addprefix ft_printf/, $(FT_PRINTF)) \
                $(addprefix gnl/, $(GNL)) \
@@ -124,7 +143,8 @@ SRCS        := $(addprefix ft_printf/, $(FT_PRINTF)) \
                $(addprefix lst/, $(LST)) \
                $(addprefix mem/, $(MEM)) \
                $(addprefix str/, $(STR)) \
-               $(addprefix misc/, $(MISC))
+               $(addprefix misc/, $(MISC)) \
+			   $(addprefix vec/, $(VEC))
 
 # Object and Dependency Files
 OBJS        := $(SRCS:%.c=$(OBJ_DEP_DIR)/%.o)
