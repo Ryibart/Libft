@@ -6,7 +6,7 @@
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 13:45:21 by rtammi            #+#    #+#             */
-/*   Updated: 2024/09/27 06:18:00 by rtammi           ###   ########.fr       */
+/*   Updated: 2024/09/30 17:57:45 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 /*══|vector_push|════════════════════════════════════════════════════════════*
 
-	Purpose:	Adds an element from the source vector `src` to the end of the 
+	Purpose:	Adds an element `src` to the end of the 
 				destination vector `dst`. This function increases the length of 
 				`dst` and resizes it if necessary to accommodate the new element.
 				
 	Parameters:
 				dst (IN/OUT) -- Pointer to the destination vector to which the 
 				element from `src` will be added.
-				src (IN) -- Pointer to the source vector containing the element to 
-				push.
+				src (IN) -- Pointer to the element to push.
 
 	Returns:	VECTOR_SUCCESS (1) on success, or VECTOR_ERROR (-1) on failure.
 

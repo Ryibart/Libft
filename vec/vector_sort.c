@@ -6,7 +6,7 @@
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 13:45:21 by rtammi            #+#    #+#             */
-/*   Updated: 2024/09/27 06:13:00 by rtammi           ###   ########.fr       */
+/*   Updated: 2024/10/07 13:43:42 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,8 @@ static void	memswap_bytes(unsigned char *a, unsigned char *b, size_t bytes)
 
 static void	memswap(void *a, void *b, size_t bytes)
 {
-	size_t		i;
-
 	if (!a || !b || bytes == 0)
 		return ;
-	i = 0;
 	if (bytes == 1)
 		memswap_bits((unsigned char *)a, (unsigned char *)b);
 	else

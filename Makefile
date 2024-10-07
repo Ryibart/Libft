@@ -6,7 +6,7 @@
 #    By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/17 14:30:33 by rtammi            #+#    #+#              #
-#    Updated: 2024/09/27 06:02:32 by rtammi           ###   ########.fr        #
+#    Updated: 2024/10/07 13:58:33 by rtammi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,8 @@ IS			:= 	ft_isalpha.c					\
 				ft_isdigit.c					\
 				ft_isalnum.c					\
 				ft_isascii.c					\
-				ft_isprint.c
+				ft_isprint.c					\
+				ft_isspace.c
 
 LST			:= 	ft_lstnew.c						\
 				ft_lstadd_front.c				\
@@ -108,7 +109,8 @@ STR			:= 	ft_strmapi.c					\
 				ft_strnstr.c					\
 				ft_strlcpy.c					\
 				ft_strlcat.c					\
-				ft_strlen.c
+				ft_strlen.c						\
+				ft_strtol.c
 
 MISC		:= 	ft_atoi.c						\
 				ft_split.c						\
@@ -198,6 +200,9 @@ fclean: clean
 	$(call fclean_success_message)
 
 re: fclean all
+# Check dependencies and rebuild if necessary
+redeps: $(DEPS)
+	@$(MAKE) -s all
 
 -include $(DEPS)
 

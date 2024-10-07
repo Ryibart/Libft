@@ -6,7 +6,7 @@
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:39:06 by rtammi            #+#    #+#             */
-/*   Updated: 2024/09/27 01:56:13 by rtammi           ###   ########.fr       */
+/*   Updated: 2024/10/07 14:00:09 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@
 # include <stdint.h>
 # include "ft_printf.h"
 # include "get_next_line.h"
+# include "t_vector.h"
 
 typedef struct s_list
 {
@@ -90,5 +91,8 @@ void		ft_lstdelone(t_list *lst, void (*del)(void *));
 void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+long	  ft_strtol(const char *str, char **endptr, int base, int *valid);
+int     ft_isspace(char c);
 
 #endif
