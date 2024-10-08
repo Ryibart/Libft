@@ -6,7 +6,7 @@
 #    By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/17 14:30:33 by rtammi            #+#    #+#              #
-#    Updated: 2024/10/07 13:58:33 by rtammi           ###   ########.fr        #
+#    Updated: 2024/10/08 15:55:23 by rtammi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -130,13 +130,16 @@ VEC			:=	vector_append.c					\
 				vector_iter.c					\
 				vector_map.c					\
 				vector_new.c					\
-				vector_pop.c					\
+				vector_pop_first.c				\
+				vector_pop_last.c				\
 				vector_prepend.c				\
-				vector_push.c					\
+				vector_push_first.c				\
+				vector_push_last.c				\
 				vector_reduce.c					\
 				vector_remove.c					\
 				vector_resize.c					\
-				vector_sort.c
+				vector_sort.c					\
+				vector_typecast.c
 
 SRCS        := $(addprefix ft_printf/, $(FT_PRINTF)) \
                $(addprefix gnl/, $(GNL)) \

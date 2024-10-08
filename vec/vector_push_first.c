@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_push.c                                      :+:      :+:    :+:   */
+/*   vector_push_first.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 13:45:21 by rtammi            #+#    #+#             */
-/*   Updated: 2024/09/30 17:57:45 by rtammi           ###   ########.fr       */
+/*   Updated: 2024/10/08 15:50:09 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "t_vector.h"
 
-/*══|vector_push|════════════════════════════════════════════════════════════*
+/*══|vector_push_first|══════════════════════════════════════════════════════*
 
-	Purpose:	Adds an element `src` to the end of the 
+	Purpose:	Adds an element `src` to the start of the 
 				destination vector `dst`. This function increases the length of 
 				`dst` and resizes it if necessary to accommodate the new element.
 				
@@ -33,7 +33,7 @@
 
 *════════════════════════════════════════════════════════════════════════════*/
 
-int	vector_push(t_vector *dst, void *src)
+int	vector_push_first(t_vector *dst, void *src)
 {
 	if (!dst || !src)
 		return (VECTOR_ERROR);
@@ -44,7 +44,9 @@ int	vector_push(t_vector *dst, void *src)
 		if (vector_resize(dst, dst->alloc_size * 2) == VECTOR_ERROR)
 			return (VECTOR_ERROR);
 	}
-	ft_memcpy(&dst->memory[dst->elem_size * dst->len], src, dst->elem_size);
+	ft_memmove(&dst->memory[dst->elem_size], &dst->memory[0],
+		dst->elem_size * dst->len);
+	ft_memcpy(&dst->memory[0], src, dst->elem_size);
 	dst->len++;
 	return (VECTOR_SUCCESS);
 }

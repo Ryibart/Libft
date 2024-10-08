@@ -6,7 +6,7 @@
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 13:45:21 by rtammi            #+#    #+#             */
-/*   Updated: 2024/09/27 06:06:14 by rtammi           ###   ########.fr       */
+/*   Updated: 2024/10/08 16:10:17 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	vector_insert(t_vector *dst, void *src, size_t index)
 	if (!dst || !src || index > dst->len)
 		return (VECTOR_ERROR);
 	else if (index == dst->len)
-		return (vector_push(dst, src));
+		return (vector_push_last(dst, src));
 	if (dst->elem_size * dst->len >= dst->alloc_size)
 	{
 		if (vector_resize(dst, (dst->alloc_size * 2) / dst->elem_size)

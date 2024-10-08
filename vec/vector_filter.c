@@ -6,7 +6,7 @@
 /*   By: rtammi <rtammi@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 13:45:21 by rtammi            #+#    #+#             */
-/*   Updated: 2024/09/27 05:34:46 by rtammi           ###   ########.fr       */
+/*   Updated: 2024/10/08 16:09:58 by rtammi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	vector_filter(t_vector *dst, t_vector *src, bool (*f) (void *))
 		ptr = vector_get(src, i);
 		ft_memcpy(res, ptr, dst->elem_size);
 		if (f(res) == true)
-			vector_push(dst, res);
+			vector_push_last(dst, res);
 		i++;
 	}
 	free(res);
